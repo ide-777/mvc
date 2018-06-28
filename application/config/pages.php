@@ -1,0 +1,48 @@
+<?php
+
+return [
+    '/index' => [
+        'id' => 1,
+        'controller' => 'Index',
+        'method' => 'index',
+        'title' => 'Main',
+        'privileges' => 'Main',
+        'show' => 1,
+        'authorization' => 0,
+        'enabled' => 1,
+        'parent' => NULL,
+    ],
+    '/about' => [
+        'id' => 2,
+        'controller' => 'About',
+        'method' => 'index',
+        'title' => 'About',
+        'privileges' => 'About',
+        'show' => 1,
+        'authorization' => 0,
+        'enabled' => 1,
+        'parent' => NULL,
+    ],
+    '/unknownPage' => [
+        'id' => 3,
+        'controller' => 'UnknownPage',
+        'method' => 'index',
+        'title' => 'Unknown',
+        'privileges' => 'NONE',
+        'show' => 1,
+        'authorization' => 0,
+        'enabled' => 1,
+        'parent' => NULL,
+    ],
+    '/404' => [
+        'id' => 4,
+        'controller' => 'Error404',
+        'method' => 'index',
+        'title' => 'Page not found',
+        'privileges' => 'NONE',
+        'show' => 0,
+        'authorization' => 0,
+        'enabled' => 1,
+        'parent' => NULL,
+    ],
+];

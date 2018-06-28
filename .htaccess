@@ -1,0 +1,8 @@
+php_value display_errors Off
+Options -Indexes
+
+
+RewriteEngine on
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^(.*)$ index.php?site_path=$1 [L,QSA]

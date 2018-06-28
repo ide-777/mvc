@@ -1,0 +1,34 @@
+.container {
+    max-width: 1000px;
+    margin: 10px auto;
+}
+
+.container .tree  ul {
+    list-style: none;
+}
+
+.container-menu {
+    width: 100%;
+    padding: 20px;
+}
+
+.container-menu ul li {
+    display: inline-block;
+}
+
+.container-menu ul li a.menu-item-link {
+    display: inline-block;
+    width: 100px;
+    text-align: center;
+    background: #a9a9a9;
+    padding: 5px;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+.container-menu ul li a.menu-item-link:hover {
+    text-decoration: underline;
+}
+.container-menu ul li a.active {
+    background: red;
+}
