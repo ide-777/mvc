@@ -30,5 +30,7 @@ class Autoloader
 
 spl_autoload_register(['Autoloader', 'loadPackages'],true);
 
+\core\Session::startSession();
+
 new \core\Common();
 new \core\Router();

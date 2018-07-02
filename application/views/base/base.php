@@ -9,6 +9,10 @@
     <meta name="keywords" content="<?=$pageKeywords?>" />
     <link href="/src/css/style.css" type="text/css" rel="stylesheet" />
 
+    <script type="text/javascript" src="/src/js/jquery-3.3.1.min.js"></script>
+    <script type="text/javascript" src="/src/js/base.js"></script>
+    <script type="text/javascript" src="/src/js/main.js"></script>
+
 
 </head>
 <body>

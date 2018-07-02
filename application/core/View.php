@@ -83,8 +83,8 @@ class View
             $_PAGES = (function() {
                                     return array_filter(
                                         Common::$_PAGES,
-                                        function ($value, $key)  {
-                                            return $value['enabled'] == 1 && $value['show'] == 1;
+                                        function ($value)  {
+                                            return $value['enabled'] == 1 && $value['show'] == 1 && ($value['authorization'] ? Common::checkAuth() : true);
                                         },
                                         ARRAY_FILTER_USE_BOTH
                                     );

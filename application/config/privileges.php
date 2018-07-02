@@ -1,5 +1,5 @@
 <?php
 
 return [
-    'guest' => ['Main', 'About'],
+    'guest' => ['Main', 'About', 'User'],
 ];

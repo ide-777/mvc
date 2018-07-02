@@ -28,7 +28,6 @@ class Index extends Controller
 
             $this->view->setTemplateToZone('content','index');
             $this->view->open($this->pageId);
-
         }
     }
 }

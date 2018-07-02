@@ -12,8 +12,19 @@ return [
         'enabled' => 1,
         'parent' => NULL,
     ],
+    '/user' => [
+        'id' => 5,
+        'controller' => 'User',
+        'method' => 'index',
+        'title' => 'User',
+        'privileges' => 'User',
+        'show' => 1,
+        'authorization' => 0,
+        'enabled' => 1,
+        'parent' => NULL,
+    ],
     '/about' => [
-        'id' => 2,
+        'id' => 3,
         'controller' => 'About',
         'method' => 'index',
         'title' => 'About',
@@ -24,7 +35,7 @@ return [
         'parent' => NULL,
     ],
     '/unknownPage' => [
-        'id' => 3,
+        'id' => 4,
         'controller' => 'UnknownPage',
         'method' => 'index',
         'title' => 'Unknown',
@@ -35,7 +46,7 @@ return [
         'parent' => NULL,
     ],
     '/404' => [
-        'id' => 4,
+        'id' => 5,
         'controller' => 'Error404',
         'method' => 'index',
         'title' => 'Page not found',
@@ -45,4 +56,5 @@ return [
         'enabled' => 1,
         'parent' => NULL,
     ],
+
 ];
