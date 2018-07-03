@@ -80,15 +80,20 @@ class View
             $pageKeywords = $this->keywords;
 
             $_VARS = $this->_VARS;
-            $_PAGES = (function() {
-                                    return array_filter(
-                                        Common::$_PAGES,
-                                        function ($value)  {
-                                            return $value['enabled'] == 1 && $value['show'] == 1 && ($value['authorization'] ? Common::checkAuth() : true);
-                                        },
-                                        ARRAY_FILTER_USE_BOTH
-                                    );
-                                })();
+
+
+            $_PAGES = ($_f = function (array $a) use (&$_f) {
+                $pages = [];
+                foreach ($a AS $kye => $value) {
+                    if($value['enabled'] == 1 && $value['show'] == 1 && ($value['authorization'] ? Common::checkAuth() : true)) {
+                        $pages[$kye] = $value;
+                        if(!empty($value['parent'])) {
+                            $pages[$kye]['parent'] = $_f($pages[$kye]['parent']);
+                        }
+                    }
+                }
+                return $pages;
+            })(Common::$_PAGES);
 
             foreach ($this->baseTemplate AS $t) {
                 require_once $t;
